@@ -44,7 +44,7 @@ jobs:
           pytest --maxfail=1 --disable-warnings -q
 
       - name: Install black for code formatting
-          run: pip install black
+        run: pip install black
 
       - name: Check and format code with black
-          run: black .
+        run: black .
