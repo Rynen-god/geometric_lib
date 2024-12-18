@@ -43,11 +43,8 @@ jobs:
           export PYTHONPATH=$PYTHONPATH:.
           pytest --maxfail=1 --disable-warnings -q
 
-      - name: Check code style with black
-        run: black .
+      - name: Install black for code formatting
+          run: pip install black
 
-      - name: Format code with black (optional)
-        run: |
-          pip install black
-          black .  # Автоматическое исправление стиля
-
+      - name: Check and format code with black
+          run: black .
